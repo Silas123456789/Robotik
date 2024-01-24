@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soziales Netzwerk</title>
+    <link rel="stylesheet" href="public/stylesheet/default.css">
+</head>
+<body>
+
+    <nav>
+        <button id="registerButton">Registrieren</button>
+        <button id="loginButton">Einloggen</button>
+    </nav>
+
+    <div id="profiles">
+        <!-- Hier werden die Benutzerprofile angezeigt -->
+    </div>
+
+    <!-- Registrierungs-Popup -->
+    <div id="registerPopup" class="popup">
+        <form id="registrationForm" onsubmit="registerUser(); return false;">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="age">Alter:</label>
+            <input type="number" id="age" required>
+
+            <label for="hobby">Hobby:</label>
+            <input type="text" id="hobby" required>
+
+            <button type="submit">Registrieren</button>
+            <button type="button" onclick="closeRegisterPopup()">Abbrechen</button>
+        </form>
+    </div>
+
+    <!-- Login-Popup -->
+    <div id="loginPopup" class="popup">
+        <form id="loginForm" onsubmit="loginUser(); return false;">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" required>
+
+            <label for="loginPassword">Passwort:</label>
+            <input type="password" id="loginPassword" required>
+
+            <button type="submit">Einloggen</button>
+            <button type="button" onclick="closeLoginPopup()">Abbrechen</button>
+        </form>
+    </div>
+
+    <script src="public/scripts.js"></script>
+
+</body>
+</html>
+
+
